@@ -41,10 +41,11 @@ class Shop:
             total += price
 
             print(
-                f"{quantity} {product}s for {price:.2f} dollars"
+                f"{quantity} {product}s for "
+                f"{price:g} dollars"
             )
 
-        print(f"Total cost is {total:.2f} dollars")
+        print(f"Total cost is {total:g} dollars")
         print("See you again!\n")
 
         return total
