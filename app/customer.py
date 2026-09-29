@@ -28,12 +28,10 @@ class Customer:
         fuel_price: float,
     ) -> float:
         distance = self.distance(shop)
-
         fuel_cost = self.car.fuel_cost(
             distance * 2,
             fuel_price,
         )
-
         product_cost = shop.total_price_of_products(
             self.product_cart,
         )

@@ -40,6 +40,7 @@ def shop_trip() -> None:
     for customer in customers:
         print(f"{customer.name} has {customer.money:g} dollars")
 
+        home_location = customer.location.copy()
         trip_costs = []
 
         for shop in shops:
@@ -81,7 +82,7 @@ def shop_trip() -> None:
             f"{cheapest_shop.name}\n"
         )
 
-        customer.location = cheapest_shop.location
+        customer.location = cheapest_shop.location.copy()
 
         cheapest_shop.buy_products(
             customer.product_cart,
@@ -89,6 +90,8 @@ def shop_trip() -> None:
         )
 
         customer.money -= cheapest_cost
+
+        customer.location = home_location
 
         print(f"{customer.name} rides home")
 

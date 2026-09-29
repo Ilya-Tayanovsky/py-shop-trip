@@ -31,9 +31,7 @@ class Shop:
             f"Date: "
             f"{datetime.datetime.now().strftime('%d/%m/%Y %H:%M:%S')}"
         )
-        print(
-            f"Thanks, {customer_name}, for your purchase!"
-        )
+        print(f"Thanks, {customer_name}, for your purchase!")
         print("You have bought:")
 
         total = 0.0
@@ -43,10 +41,10 @@ class Shop:
             total += price
 
             print(
-                f"{quantity} {product}s for {price:g} dollars"
+                f"{quantity} {product}s for {price:.2f} dollars"
             )
 
-        print(f"Total cost is {total:g} dollars")
+        print(f"Total cost is {total:.2f} dollars")
         print("See you again!\n")
 
         return total

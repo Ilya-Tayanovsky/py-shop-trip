@@ -11,8 +11,6 @@ class Car:
         distance: float,
         fuel_price: float,
     ) -> float:
-        fuel_needed = (
-            distance * self.fuel_consumption / 100
-        )
+        fuel_needed = distance * self.fuel_consumption / 100
 
         return fuel_needed * fuel_price
